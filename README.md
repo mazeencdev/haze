@@ -45,11 +45,21 @@ To add Google Calendar, add your Google account in **System Settings › Interne
 | ⌘R | Sync now |
 | Double-click the grid | Create an event at that time |
 
+## Demo mode
+
+Run Haze on sample data, without touching your calendars:
+
+```bash
+HAZE_DEMO=1 open Haze.app
+```
+
+`swift Resources/record_demo.swift tour.mov` plays a scripted tour and records the window. It needs Screen Recording permission for the app you run it from. It also writes a cue timeline for syncing sound and captions.
+
 ## Project layout
 
 ```
 Sources/Haze/        SwiftUI app (views, EventKit store, demo director)
-Resources/           Info.plist and the logo / icon renderer
+Resources/           Info.plist, logo / icon renderer, demo recorder
 Logo/                Logo and icon artwork
 build.sh             Builds and signs Haze.app
 ```

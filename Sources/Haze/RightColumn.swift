@@ -44,7 +44,7 @@ struct UpNextCard: View {
 
     private func upNext(_ now: Date) -> UpNextItem? {
         let todo = store.todos
-            .filter { !$0.isCompleted && $0.due != nil && $0.due! < now.adding(days: 3) }
+            .filter { !$0.isCompleted && $0.hasTime && $0.due != nil && $0.due! < now.adding(days: 3) }
             .min { $0.due! < $1.due! }
         let ev = store.events
             .filter { !$0.isAllDay && $0.end > now && $0.start < now.adding(days: 14) }
