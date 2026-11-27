@@ -1,0 +1,6 @@
+.build/
+.swiftpm/
+Haze.app/
+*.mov
+*.mov.log
+.DS_Store
